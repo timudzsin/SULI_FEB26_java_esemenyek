@@ -1,0 +1,9 @@
+id;cím;dátum;típus;felek_száma/ügyszám
+1;Origins;2002Jan03;Sz;3
+2;Valhalla;2010Feb22;Sz;15
+3;Brotherhood;2015Sep22;Sz;9
+4;Shadows;2016Jun26;Sz;4
+5;Odyssey;1998Nov06;BH;1001
+6;Syndicate;1999May12;BH;1002
+7;Unity;2018Nov01;BH;1003
+8;Mirage;2025Dec24;BH;1004

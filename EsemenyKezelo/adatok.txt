@@ -1,0 +1,3 @@
+SZINHAZ;1;Hamlet;2025-05-10;Nagy Péter
+DOLGOZAT;2;Zárthelyi;2025-04-20;Matematika
+KONCERT;3;Tavaszi koncert;2025-06-01;Halott Pénz
