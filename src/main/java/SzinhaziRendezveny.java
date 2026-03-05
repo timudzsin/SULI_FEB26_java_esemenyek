@@ -8,6 +8,14 @@ public class SzinhaziRendezveny extends Esemeny {
         this.rendezo = rendezo;
     }
 
+    public String getRendezo() {
+        return rendezo;
+    }
+
+    public void setRendezo(String rendezo) {
+        this.rendezo = rendezo;
+    }
+
     @Override
     public String getTipus() {
         return "Színházi rendezvény";

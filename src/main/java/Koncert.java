@@ -8,6 +8,14 @@ public class Koncert extends Esemeny {
         this.eloado = eloado;
     }
 
+    public String getEloado() {
+        return eloado;
+    }
+
+    public void setEloado(String eloado) {
+        this.eloado = eloado;
+    }
+
     @Override
     public String getTipus() {
         return "Koncert";

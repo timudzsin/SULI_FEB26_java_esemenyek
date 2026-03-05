@@ -23,6 +23,18 @@ public abstract class Esemeny {
         return datum;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDatum(LocalDate datum) {
+        this.datum = datum;
+    }
+
+    public void setTema(String tema) {
+        this.tema = tema;
+    }
+
     // Polimorf kiírás
     public abstract String getTipus();
 

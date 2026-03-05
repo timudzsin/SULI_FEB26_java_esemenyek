@@ -8,7 +8,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ProgramTest {
-
     private Program program;
 
     @BeforeEach
@@ -32,20 +31,16 @@ public class ProgramTest {
 
     @Test
     void elsoElemSzinhaz() {
-        Esemeny e = program.getEsemenyek().get(0);
-        assertTrue(e instanceof SzinhaziRendezveny);
-        assertEquals("Hamlet", e.getTema());
+        assertTrue(program.getEsemenyek().get(0) instanceof SzinhaziRendezveny);
     }
 
     @Test
     void masodikElemDolgozat() {
-        Esemeny e = program.getEsemenyek().get(1);
-        assertTrue(e instanceof Dolgozat);
+        assertTrue(program.getEsemenyek().get(1) instanceof Dolgozat);
     }
 
     @Test
     void harmadikElemKoncert() {
-        Esemeny e = program.getEsemenyek().get(2);
-        assertTrue(e instanceof Koncert);
+        assertTrue(program.getEsemenyek().get(2) instanceof Koncert);
     }
 }

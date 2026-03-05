@@ -8,6 +8,14 @@ public class Dolgozat extends Esemeny {
         this.tantargy = tantargy;
     }
 
+    public String getTantargy() {
+        return tantargy;
+    }
+
+    public void setTantargy(String tantargy) {
+        this.tantargy = tantargy;
+    }
+
     @Override
     public String getTipus() {
         return "Dolgozat";
