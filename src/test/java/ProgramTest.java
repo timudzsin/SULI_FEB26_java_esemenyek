@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -44,5 +45,37 @@ public class ProgramTest {
     @Test
     void harmadikElemKoncert() {
         assertTrue(program.getEsemenyek().get(2) instanceof Koncert);
+    }
+
+    @Test
+    void meghirdetettEsemenyCimeNemValtoztathato() {
+        Esemeny a = program.getEsemenyek().get(2);
+        Esemeny b = program.getEsemenyek().get(2);
+        b.setCim("Tengerpari koncert");
+
+        assertEquals(a, b);
+    }
+
+    @Test
+    void lezartEsemenyDatumaNemValtoztathato() {
+        Esemeny a = program.getEsemenyek().get(2);
+        Esemeny b = program.getEsemenyek().get(2);
+        b.setDatum(LocalDate.parse("2027-11-01"));
+
+        assertEquals(a, b);
+    }
+
+    @Test
+    void egyEsemenyreTobbszorNemMehetEgyEmber() {
+        Ember kata = new Ember("Kata");
+
+        Esemeny a = program.getEsemenyek().get(2);
+        a.addResztvevo(kata);
+
+        Esemeny b = program.getEsemenyek().get(2);
+        b.addResztvevo(kata);
+        b.addResztvevo(kata);
+
+        assertEquals(a, b);
     }
 }

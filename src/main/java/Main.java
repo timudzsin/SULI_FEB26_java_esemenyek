@@ -19,7 +19,7 @@ public class Main {
 
         // résztvevők
         Esemeny egyEsemeny = program.getEsemenyek().get(0);
-        
+
         System.out.println(egyEsemeny);
         System.out.println(egyEsemeny.getResztvevok());
 
