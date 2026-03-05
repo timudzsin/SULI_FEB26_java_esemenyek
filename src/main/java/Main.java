@@ -28,6 +28,7 @@ public class Main {
         egyEsemeny.addResztvevo(balint);
         egyEsemeny.addResztvevo(kristof);
         egyEsemeny.addResztvevo(kristof);
+        egyEsemeny.addResztvevo(kristof);
         System.out.println(egyEsemeny.getResztvevok());
     }
 }
