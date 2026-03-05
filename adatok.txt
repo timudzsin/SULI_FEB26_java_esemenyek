@@ -1,5 +1,5 @@
-SZINHAZ;1;Hamlet;2025-05-10;Nagy Péter
-DOLGOZAT;2;Zárthelyi;2025-04-20;Matematika
-KONCERT;3;Tavaszi koncert;2025-06-01;Halott Pénz
-DOLGOZAT;2;Zárthelyi;2026-01-12;Kémia
-DOLGOZAT;2;Zárthelyi;2025-09-11;Pszichológia
+SZINHAZ;TERVEZETT;1;Hamlet;2025-05-10;Nagy Péter
+DOLGOZAT;TERVEZETT;2;Zárthelyi;2025-04-20;Matematika
+KONCERT;TERVEZETT;3;Tavaszi koncert;2025-06-01;Halott Pénz
+DOLGOZAT;MEHIRDETETT;2;Zárthelyi;2026-01-12;Kémia
+DOLGOZAT;LEZÁRT;2;Zárthelyi;2025-09-11;Pszichológia

@@ -18,9 +18,9 @@ public class ProgramTest {
 
         // Teszt fájl létrehozása
         FileWriter writer = new FileWriter("test_adatok.txt");
-        writer.write("SZINHAZ;1;Hamlet;2025-05-10;Nagy Péter\n");
-        writer.write("DOLGOZAT;2;ZH;2025-04-20;Matematika\n");
-        writer.write("KONCERT;3;Tavaszi koncert;2025-06-01;Halott Pénz\n");
+        writer.write("SZINHAZ;TERVEZETT;1;Hamlet;2025-05-10;Nagy Péter\n");
+        writer.write("DOLGOZAT;MEHIRDETETT;2;ZH;2025-04-20;Matematika\n");
+        writer.write("KONCERT;LEZÁRT;3;Tavaszi koncert;2025-06-01;Halott Pénz\n");
         writer.close();
 
         program.beolvasFajlbol("test_adatok.txt");

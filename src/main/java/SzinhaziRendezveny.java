@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class SzinhaziRendezveny extends Esemeny {
     private String rendezo;
 
-    public SzinhaziRendezveny(int id, String tema, LocalDate datum, String rendezo) {
-        super(id, tema, datum);
+    public SzinhaziRendezveny(String statusz, int id, String cim, LocalDate datum, String rendezo) {
+        super(statusz, id, cim, datum);
         this.rendezo = rendezo;
     }
 

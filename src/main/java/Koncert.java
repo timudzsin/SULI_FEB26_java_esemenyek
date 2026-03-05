@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class Koncert extends Esemeny {
     private String eloado;
 
-    public Koncert(int id, String tema, LocalDate datum, String eloado) {
-        super(id, tema, datum);
+    public Koncert(String statusz, int id, String cim, LocalDate datum, String eloado) {
+        super(statusz, id, cim, datum);
         this.eloado = eloado;
     }
 

@@ -3,13 +3,15 @@
 import java.time.LocalDate;
 
 public abstract class Esemeny {
+    private String statusz;
     private int id;
-    private String tema;
+    private String cim;
     private LocalDate datum;
 
-    public Esemeny(int id, String tema, LocalDate datum) {
+    public Esemeny(String statusz, int id, String cim, LocalDate datum) {
+        this.statusz = statusz;
         this.id = id;
-        this.tema = tema;
+        this.cim = cim;
         this.datum = datum;
     }
 
@@ -17,24 +19,28 @@ public abstract class Esemeny {
         return id;
     }
 
-    public String getTema() {
-        return tema;
+    public String getCim() {
+        return cim;
     }
 
     public LocalDate getDatum() {
         return datum;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCim(String cim) {
+        if(this.statusz.equals("MEHIRDETETT") || this.statusz.equals("LEZÁRT")) {
+            System.out.println("ennek az eseménynek nem lehet váoltoztatni a címét.");
+            return;
+        }
+        this.cim = cim;
     }
 
     public void setDatum(LocalDate datum) {
+        if(this.statusz.equals("LEZÁRT")) {
+            System.out.println("ennek az eseménynek nem lehet váoltoztatni a dátumát.");
+            return;
+        }
         this.datum = datum;
-    }
-
-    public void setTema(String tema) {
-        this.tema = tema;
     }
 
     // Polimorf kiírás
@@ -43,7 +49,8 @@ public abstract class Esemeny {
     @Override
     public String toString() {
         return "ID: " + id +
-                ", Téma: " + tema +
+                ", Státusz: " + statusz +
+                ", Cím: " + cim +
                 ", Dátum: " + datum +
                 ", Típus: " + getTipus();
     }

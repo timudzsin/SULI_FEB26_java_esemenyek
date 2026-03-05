@@ -15,16 +15,18 @@ public class Program {
                 String[] adatok = sor.split(";");
 
                 String tipus = adatok[0];
-                int id = Integer.parseInt(adatok[1]);
-                String tema = adatok[2];
-                LocalDate datum = LocalDate.parse(adatok[3]);
+                String statusz = adatok[1];
+                int id = Integer.parseInt(adatok[2]);
+
+                String tema = adatok[3];
+                LocalDate datum = LocalDate.parse(adatok[4]);
 
                 if (tipus.equals("SZINHAZ")) {
-                    esemenyek.add(new SzinhaziRendezveny(id, tema, datum, adatok[4]));
+                    esemenyek.add(new SzinhaziRendezveny(statusz, id, tema, datum, adatok[5]));
                 } else if (tipus.equals("DOLGOZAT")) {
-                    esemenyek.add(new Dolgozat(id, tema, datum, adatok[4]));
+                    esemenyek.add(new Dolgozat(statusz, id, tema, datum, adatok[5]));
                 } else if (tipus.equals("KONCERT")) {
-                    esemenyek.add(new Koncert(id, tema, datum, adatok[4]));
+                    esemenyek.add(new Koncert(statusz, id, tema, datum, adatok[5]));
                 }
             }
         } catch (IOException e) {

@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class Dolgozat extends Esemeny {
     private String tantargy;
 
-    public Dolgozat(int id, String tema, LocalDate datum, String tantargy) {
-        super(id, tema, datum);
+    public Dolgozat(String statusz, int id, String cim, LocalDate datum, String tantargy) {
+        super(statusz, id, cim, datum);
         this.tantargy = tantargy;
     }
 
