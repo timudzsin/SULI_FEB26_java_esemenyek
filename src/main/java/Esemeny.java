@@ -1,18 +1,33 @@
 // kész
 
 import java.time.LocalDate;
+import java.util.HashSet;
 
 public abstract class Esemeny {
     private String statusz;
     private int id;
     private String cim;
     private LocalDate datum;
+    private HashSet resztvevok;
 
     public Esemeny(String statusz, int id, String cim, LocalDate datum) {
         this.statusz = statusz;
         this.id = id;
         this.cim = cim;
         this.datum = datum;
+        this.resztvevok = new HashSet();
+    }
+
+    public HashSet getResztvevok() {
+        return resztvevok;
+    }
+
+    public void addResztvevo(Ember ember) {
+        resztvevok.add(ember);
+    }
+
+    public void setResztvevok(HashSet resztvevok) {
+        this.resztvevok = resztvevok;
     }
 
     public int getId() {

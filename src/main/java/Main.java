@@ -7,13 +7,27 @@ public class Main {
         Program program = new Program();
         program.beolvasFajlbol("adatok.txt");
 
-        //program.listaz();
-        //program.listazTipus("Dolgozat");
+//        program.listaz();
+//        program.listazTipus("Dolgozat");
 
-        Esemeny egyEsemeny = program.getEsemenyek().get(4);
+        // ha meghírdetett nem lehet változtatni a címét, ha lezárt nem lehet változtatni a dátumát sem
+//        Esemeny egyEsemeny = program.getEsemenyek().get(4);
+//        System.out.println(egyEsemeny);
+//        egyEsemeny.setCim("Kegyetlen dolgozat");
+//        egyEsemeny.setDatum(LocalDate.parse("2027-11-01"));
+//        System.out.println(egyEsemeny);
+
+        // résztvevők
+        Esemeny egyEsemeny = program.getEsemenyek().get(0);
+        
         System.out.println(egyEsemeny);
-        egyEsemeny.setCim("Gigantikus dolgozat");
-        egyEsemeny.setDatum(LocalDate.parse("2027-11-01"));
-        System.out.println(egyEsemeny);
+        System.out.println(egyEsemeny.getResztvevok());
+
+        Ember balint = new Ember("Bálint");
+        Ember kristof = new Ember("Kristóf");
+        egyEsemeny.addResztvevo(balint);
+        egyEsemeny.addResztvevo(kristof);
+        egyEsemeny.addResztvevo(kristof);
+        System.out.println(egyEsemeny.getResztvevok());
     }
 }
