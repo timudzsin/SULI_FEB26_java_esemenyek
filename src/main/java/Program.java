@@ -1,3 +1,5 @@
+// kész
+
 import java.io.*;
 import java.time.LocalDate;
 import java.util.*;
@@ -31,8 +33,16 @@ public class Program {
     }
 
     public void listaz() {
-        for (Esemeny e : esemenyek) {
-            System.out.println(e);
+        for (int i = 0; i < esemenyek.size(); i++) {
+            System.out.println(esemenyek.get(i));
+        }
+    }
+
+    public void listazTipus(String tipus) {
+        for (int i = 0; i < esemenyek.size(); i++) {
+            if (esemenyek.get(i).getTipus().equals(tipus)) {
+                System.out.println(esemenyek.get(i));
+            }
         }
     }
 

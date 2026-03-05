@@ -1,3 +1,5 @@
+// kész
+
 import java.time.LocalDate;
 
 public class SzinhaziRendezveny extends Esemeny {
